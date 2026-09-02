@@ -1,10 +1,42 @@
-# A RabbitMQ example with NodeJS
+# RabbitMQ with Node.js
 
-Here's a straightforward demonstration of utilizing RabbitMQ with TypeScript.
+A minimal publisher/subscriber example using RabbitMQ and TypeScript.
 
-## Step by Step
+## Project goal
 
-1. Install dependencies: `npm i`
-2. Run the Docker Compose: `docker compose up -d`
-3. Publish a message to a queue: `npm run start:publisher`
-4. Subscribe to a queue: `npm run start:subscriber`
+Demonstrate the basic message flow between independent processes through a durable queue.
+
+## Features
+
+- Publish messages to a queue
+- Consume messages in a separate process
+- Provision RabbitMQ with Docker Compose
+
+## Technologies
+
+- **TypeScript**
+- **Node.js**
+- **RabbitMQ**
+- **amqplib**
+- **Docker Compose**
+
+## What I learned
+
+- Separating message producers from consumers
+- Connecting Node.js processes to RabbitMQ
+- Declaring and consuming queues
+- Using a message broker for asynchronous communication
+
+## Running locally
+
+```bash
+npm install
+docker compose up -d
+npm run start:subscriber
+# In another terminal:
+npm run start:publisher
+```
+
+## Project status
+
+This is a learning and experimentation repository. It documents the concepts practiced at the time and is not presented as a production-ready application.
